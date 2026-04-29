@@ -1,0 +1,88 @@
+{
+  "name": "Appointment",
+  "type": "object",
+  "properties": {
+    "patient_name": {
+      "type": "string",
+      "description": "Full name of the patient"
+    },
+    "patient_email": {
+      "type": "string",
+      "description": "Patient's email address for email reminders"
+    },
+    "patient_phone": {
+      "type": "string",
+      "description": "Patient's phone number for SMS reminders"
+    },
+    "therapist_name": {
+      "type": "string",
+      "description": "Name of the physical therapist"
+    },
+    "session_type": {
+      "type": "string",
+      "enum": [
+        "Initial Evaluation",
+        "Follow-Up",
+        "Manual Therapy",
+        "Exercise Therapy",
+        "Aquatic Therapy",
+        "Sports Rehab",
+        "Post-Surgery"
+      ],
+      "description": "Type of physical therapy session"
+    },
+    "appointment_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Date and time of the appointment"
+    },
+    "duration_minutes": {
+      "type": "number",
+      "default": 60,
+      "description": "Duration of session in minutes"
+    },
+    "location": {
+      "type": "string",
+      "description": "Location or room number for the session"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "scheduled",
+        "reminder_sent",
+        "confirmed",
+        "completed",
+        "no_show",
+        "cancelled"
+      ],
+      "default": "scheduled",
+      "description": "Current status of the appointment"
+    },
+    "reminder_channels": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "email",
+          "sms"
+        ]
+      },
+      "description": "Channels to use for sending reminders"
+    },
+    "reminder_sent_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when the reminder was sent"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes for the session"
+    }
+  },
+  "required": [
+    "patient_name",
+    "patient_email",
+    "session_type",
+    "appointment_date"
+  ]
+}
