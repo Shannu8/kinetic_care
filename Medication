@@ -1,0 +1,54 @@
+{
+  "name": "Medication",
+  "type": "object",
+  "properties": {
+    "patient_id": {
+      "type": "string",
+      "title": "Patient ID"
+    },
+    "name": {
+      "type": "string",
+      "title": "Medication Name"
+    },
+    "dosage": {
+      "type": "string",
+      "title": "Dosage"
+    },
+    "frequency": {
+      "type": "string",
+      "title": "Frequency"
+    },
+    "time_of_day": {
+      "type": "string",
+      "title": "Time of Day",
+      "enum": [
+        "morning",
+        "afternoon",
+        "evening",
+        "night",
+        "as_needed"
+      ]
+    },
+    "instructions": {
+      "type": "string",
+      "title": "Special Instructions"
+    },
+    "is_active": {
+      "type": "boolean",
+      "title": "Active"
+    },
+    "last_taken": {
+      "type": "string",
+      "title": "Last Taken"
+    },
+    "adherence_rate": {
+      "type": "number",
+      "title": "Adherence Rate (%)"
+    }
+  },
+  "required": [
+    "patient_id",
+    "name",
+    "dosage"
+  ]
+}
