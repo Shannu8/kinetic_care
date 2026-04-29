@@ -1,0 +1,55 @@
+{
+  "name": "NotificationLog",
+  "type": "object",
+  "properties": {
+    "appointment_id": {
+      "type": "string",
+      "description": "Reference to the appointment"
+    },
+    "patient_name": {
+      "type": "string",
+      "description": "Patient name for quick reference"
+    },
+    "channel": {
+      "type": "string",
+      "enum": [
+        "email",
+        "sms"
+      ],
+      "description": "Channel used for notification"
+    },
+    "recipient": {
+      "type": "string",
+      "description": "Email or phone number of recipient"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "sent",
+        "failed",
+        "pending"
+      ],
+      "default": "pending",
+      "description": "Delivery status of the notification"
+    },
+    "message_preview": {
+      "type": "string",
+      "description": "Preview of the message sent"
+    },
+    "appointment_date": {
+      "type": "string",
+      "description": "The appointment date for display"
+    },
+    "sent_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the notification was sent"
+    }
+  },
+  "required": [
+    "appointment_id",
+    "patient_name",
+    "channel",
+    "recipient"
+  ]
+}
