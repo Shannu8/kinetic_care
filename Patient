@@ -1,0 +1,73 @@
+{
+  "name": "Patient",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string",
+      "title": "Full Name"
+    },
+    "age": {
+      "type": "number",
+      "title": "Age"
+    },
+    "photo_url": {
+      "type": "string",
+      "title": "Photo URL"
+    },
+    "diagnosis_stage": {
+      "type": "string",
+      "title": "Diagnosis Stage",
+      "enum": [
+        "early",
+        "mild",
+        "moderate"
+      ]
+    },
+    "primary_language": {
+      "type": "string",
+      "title": "Primary Language"
+    },
+    "emergency_contact": {
+      "type": "string",
+      "title": "Emergency Contact"
+    },
+    "emergency_phone": {
+      "type": "string",
+      "title": "Emergency Phone"
+    },
+    "daily_routine": {
+      "type": "string",
+      "title": "Daily Routine Notes"
+    },
+    "preferences": {
+      "type": "string",
+      "title": "Preferences & Likes"
+    },
+    "risk_score": {
+      "type": "number",
+      "title": "Risk Score (0-100)"
+    },
+    "last_interaction": {
+      "type": "string",
+      "title": "Last Interaction Time"
+    },
+    "mood_trend": {
+      "type": "string",
+      "title": "Current Mood Trend",
+      "enum": [
+        "happy",
+        "neutral",
+        "anxious",
+        "confused",
+        "sad"
+      ]
+    },
+    "assigned_caregiver": {
+      "type": "string",
+      "title": "Assigned Caregiver Email"
+    }
+  },
+  "required": [
+    "full_name"
+  ]
+}
