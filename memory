@@ -1,0 +1,78 @@
+{
+  "name": "Memory",
+  "type": "object",
+  "properties": {
+    "patient_id": {
+      "type": "string",
+      "title": "Patient ID"
+    },
+    "category": {
+      "type": "string",
+      "title": "Category",
+      "enum": [
+        "family",
+        "event",
+        "place",
+        "music",
+        "food",
+        "hobby",
+        "pet",
+        "work",
+        "health",
+        "other"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "title": "Title"
+    },
+    "description": {
+      "type": "string",
+      "title": "Description"
+    },
+    "people_involved": {
+      "type": "string",
+      "title": "People Involved"
+    },
+    "date_of_memory": {
+      "type": "string",
+      "title": "Date of Memory"
+    },
+    "photo_url": {
+      "type": "string",
+      "title": "Photo URL"
+    },
+    "voice_note_url": {
+      "type": "string",
+      "title": "Voice Note URL"
+    },
+    "emotional_significance": {
+      "type": "string",
+      "title": "Emotional Significance",
+      "enum": [
+        "very_important",
+        "important",
+        "moderate",
+        "casual"
+      ]
+    },
+    "added_by": {
+      "type": "string",
+      "title": "Added By (Family Member)"
+    },
+    "relationship": {
+      "type": "string",
+      "title": "Relationship to Patient"
+    },
+    "ai_context": {
+      "type": "string",
+      "title": "AI Context (for companion use)"
+    }
+  },
+  "required": [
+    "patient_id",
+    "title",
+    "category"
+  ]
+
+}
