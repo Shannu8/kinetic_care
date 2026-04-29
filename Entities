@@ -1,0 +1,55 @@
+{
+  "name": "Alert",
+  "type": "object",
+  "properties": {
+    "patient_id": {
+      "type": "string",
+      "title": "Patient ID"
+    },
+    "type": {
+      "type": "string",
+      "title": "Alert Type",
+      "enum": [
+        "missed_medication",
+        "confusion",
+        "distress",
+        "inactivity",
+        "fall_risk",
+        "emergency",
+        "cognitive_decline"
+      ]
+    },
+    "severity": {
+      "type": "string",
+      "title": "Severity",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ]
+    },
+    "message": {
+      "type": "string",
+      "title": "Alert Message"
+    },
+    "is_resolved": {
+      "type": "boolean",
+      "title": "Resolved"
+    },
+    "resolved_by": {
+      "type": "string",
+      "title": "Resolved By"
+    },
+    "resolved_at": {
+      "type": "string",
+      "title": "Resolved At"
+    }
+  },
+  "required": [
+    "patient_id",
+    "type",
+    "severity",
+    "message"
+  ]
+}
