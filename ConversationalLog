@@ -1,0 +1,57 @@
+{
+  "name": "ConversationLog",
+  "type": "object",
+  "properties": {
+    "patient_id": {
+      "type": "string",
+      "title": "Patient ID"
+    },
+    "transcript": {
+      "type": "string",
+      "title": "Conversation Transcript"
+    },
+    "summary": {
+      "type": "string",
+      "title": "AI Summary"
+    },
+    "detected_mood": {
+      "type": "string",
+      "title": "Detected Mood",
+      "enum": [
+        "happy",
+        "neutral",
+        "anxious",
+        "confused",
+        "sad",
+        "distressed"
+      ]
+    },
+    "topics_discussed": {
+      "type": "string",
+      "title": "Topics Discussed"
+    },
+    "confusion_events": {
+      "type": "number",
+      "title": "Confusion Events Count"
+    },
+    "duration_minutes": {
+      "type": "number",
+      "title": "Duration (minutes)"
+    },
+    "cognitive_score": {
+      "type": "number",
+      "title": "Cognitive Score (0-10)"
+    },
+    "flagged": {
+      "type": "boolean",
+      "title": "Flagged for Review"
+    },
+    "flag_reason": {
+      "type": "string",
+      "title": "Flag Reason"
+    }
+  },
+  "required": [
+    "patient_id"
+  ]
+}
