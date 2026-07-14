@@ -1,5 +1,6 @@
 {
   "name": "Alert",
+
   "type": "object",
   "properties": {
     "patient_id": {
